@@ -495,7 +495,7 @@ function getConnectionString(item: ISSHConnection) {
   if (item.port) parts.push(`- p ${item.port} `);
   if (item.command) parts.push(`"${item.command}"`);
 
-  const address = item.user ? `${item.user} @${item.address} ` : item.address;
+  const address = item.user ? `${item.user}@${item.address}` : item.address;
   parts.unshift("ssh", address);
 
   return parts.filter(Boolean).join(" ");
